@@ -1,0 +1,126 @@
+<!-- THIS IS THE HOME PAGE-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nicholas's Website</title>
+
+    <div class="hero">
+        <meta charset="UTF-8">
+ 
+        <link rel="stylesheet" href="page4.css">
+        <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="wrapper-main">
+    <div class="typewriter-container ">
+        <div class="typewriter " id="typewriter"></div>
+    </div>
+    <script>
+        const typewriter = document.getElementById('typewriter');
+        const messages = ["Full-Stack Developer", "Front-End Developer"];
+        let index = 0;
+        let charIndex = 0;
+
+        function type() {
+            const currentMessage = messages[index];
+            const currentText = currentMessage.slice(0, ++charIndex);
+
+            typewriter.textContent = currentText;
+
+            if (charIndex === currentMessage.length) {
+                // Typing complete, wait before retyping a new word
+                setTimeout(() => {
+                    erase();
+                }, 2000);
+            } else {
+                // Continue typing
+                setTimeout(type, 100); // Adjust the typing speed here
+            }
+        }
+
+        function erase() {
+            const currentMessage = messages[index];
+            const currentText = currentMessage.slice(0, charIndex);
+
+            typewriter.textContent = currentText;
+
+            if (charIndex === 0) {
+                // Erasing complete, move to the next message
+                index = (index + 1) % messages.length;
+
+                typewriter.style.fontFamily = 'Times New Roman'; // Change to your desired font
+                typewriter.style.fontWeight = 'bold'; // 
+
+
+                setTimeout(type, 1000); // Wait before typing new text
+            } else {
+                // Continue erasing
+                charIndex--;
+                setTimeout(erase, 50); // Adjust the erasing speed here
+            }
+        }
+        // Start the typing animation
+        setTimeout(type, 800);
+
+    </script>
+    </style>
+</body>
+
+<body>
+
+    <div class="custom-container animation-container">
+        <div class="animated-object">
+            <div class="profile-container ">
+                <img class="profile-picture" src="formal.png" alt="Profile Picture">
+            </div>
+        </div>
+    </div>
+    <div class="h5">
+        <div class="custom-container animation-container">
+            <div class="animated-object">
+                <h5><br>Welcome to my Personal website </h5>
+            </div>
+        </div>
+    </div>
+    <div class="stacked-text">
+        <span><p><h6>Hello World, I'm</h6></p></span>
+        <span>
+            <h2 id="h2" class="slide-up-object">
+                <p>Nicholas Ackley
+            </h2>
+        </span>
+    </div>
+    <div class="header-icons">
+        <h1><b>nicholasAckley(); </b></h1>
+    </div>
+       <div class="bottom-nav-bar">
+        <div class="nav">
+        <ul>
+            <li><a href="page4.html" class="tab" onclick="showContent('page4')">Home</a></li>
+            <li><a href="page3.html" class="tab" onclick="showContent('page3')">About</a></li>
+            <li><a href="page2.html" class="tab" onclick="showContent('page2')">Repetoire</a></li>
+            <li><a href="https://github.com/nicholas-ackley/ones-zeros" class="tab" onclick="showContent('page1')">Git Hub</a>
+                <img src="github1.png" alt="Logo" class="logo"></li>
+    </div>
+    </ul>
+</div>
+   
+    <div class="navbar">
+        <ul>
+            <li><a href="page4.html" class="tab" onclick="showContent('page4')">Home</a></li>
+            <li><a href="page3.html" class="tab" onclick="showContent('page3')">About</a></li>
+            <li><a href="page2.html" class="tab" onclick="showContent('page2')">Repertoire</a></li>
+            <li><a href="https://github.com/nicholas-ackley/ones-zeros" class="tab" onclick="showContent('page1')">Git Hub</a>
+                <img src="github1.png" alt="Logo" class="logo"></li>
+    </div>
+    </ul>
+</body>
+</div>
+</div>
+
+</html>
